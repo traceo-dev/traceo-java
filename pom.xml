@@ -18,6 +18,8 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <apache.httpclient.version>4.5.13</apache.httpclient.version>
+        <jackson.databind.version>2.13.0</jackson.databind.version>
     </properties>
 
 </project>

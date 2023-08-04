@@ -1,4 +1,4 @@
-package com.traceo.sdk.transport;
+package com.traceo.sdk.http;
 
 public enum HttpMethod {
     GET,

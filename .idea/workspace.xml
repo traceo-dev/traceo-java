@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64f6307d-2a79-4da6-bde5-c64cec0b955a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/transport/HttpMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/transport/ITransport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/transport/Transport.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/transport/TransportOptions.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +22,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="JUnit3 Test Class" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -62,10 +68,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -77,11 +83,15 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.traceo.sdk" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.traceo.sdk" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.traceo.sdk.apacheTransport" />
       <recent name="com.traceo.sdk" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExceptionHandlerTest.testCaptureException">
+  <component name="RunManager" selected="JUnit.HttpClientTest.testExecute">
     <configuration name="ExceptionHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="traceo-sdk" />
       <extension name="coverage">
@@ -113,8 +123,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HttpClientTest.testExecute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="traceo-sdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.traceo.sdk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.traceo.sdk" />
+      <option name="MAIN_CLASS_NAME" value="com.traceo.sdk.HttpClientTest" />
+      <option name="METHOD_NAME" value="testExecute" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HttpClientTest.testExecute" />
         <item itemvalue="JUnit.ExceptionHandlerTest.testCaptureException" />
         <item itemvalue="JUnit.ExceptionHandlerTest" />
       </list>
@@ -130,7 +157,7 @@
       <updated>1690979744651</updated>
       <workItem from="1690979745725" duration="4770000" />
       <workItem from="1691002764505" duration="20779000" />
-      <workItem from="1691082682113" duration="5479000" />
+      <workItem from="1691082682113" duration="28935000" />
     </task>
     <servers />
   </component>
@@ -140,7 +167,7 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="TraceoCoreClient.getConfigs()" language="JAVA" />
+        <watch expression="httpRequestFactory.create(IRequest, this.configuration)" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
