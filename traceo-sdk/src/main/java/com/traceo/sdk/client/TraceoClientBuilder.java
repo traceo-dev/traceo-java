@@ -2,11 +2,18 @@ package com.traceo.sdk.client;
 
 import com.traceo.sdk.builder.CoreBuilder;
 
+/**
+ * Builder for creating configuration for {@link com.traceo.sdk.client.TraceoClient}.
+ */
 public class TraceoClientBuilder extends CoreBuilder<TraceoClientBuilder, TraceoClientConfiguration> {
     protected TraceoClientBuilder() {
         super(new TraceoClientConfiguration());
     }
 
+    /**
+     * Create new instance of this builder with default configuration for each option.
+     * @return Builder instance
+     */
     public static TraceoClientBuilder standard() {
         return new TraceoClientBuilder();
     }
@@ -15,16 +22,23 @@ public class TraceoClientBuilder extends CoreBuilder<TraceoClientBuilder, Traceo
         return standard().build();
     }
 
-    public final TraceoClientBuilder withMetricsCollection(boolean collect) {
-        configuration.setCollectMetrics(collect);
-        return this;
-    }
+    /**
+     * Set to false if you SDK shouldn't collect any default metrics. It does not affect for OpenTelemetry.
+     * @param collect
+     * @return
+     */
+//    public final TraceoClientBuilder withMetricsCollection(boolean collect) {
+//        configuration.setCollectMetrics(collect);
+//        return this;
+//    }
 
-    public final TraceoClientBuilder withOfflineMode(boolean isOffline) {
-        configuration.setOffline(isOffline);
-        return this;
-    }
 
+    /**
+     * Set custom value for export default metrics interval.
+     *
+     * @param ms value provided in milliseconds
+     * @return
+     */
     public final TraceoClientBuilder withExportIntervalMs(int ms) {
         configuration.setExportIntervalMillis(ms);
         return this;

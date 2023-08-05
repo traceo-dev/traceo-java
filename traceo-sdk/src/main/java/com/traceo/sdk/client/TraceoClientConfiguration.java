@@ -6,8 +6,6 @@ public class TraceoClientConfiguration extends ClientCoreConfiguration {
 
     private boolean collectMetrics = false;
 
-    private boolean offline = false;
-
     private int exportIntervalMillis = 15000;
 
     public TraceoClientConfiguration() {}
@@ -20,13 +18,6 @@ public class TraceoClientConfiguration extends ClientCoreConfiguration {
         this.collectMetrics = collectMetrics;
     }
 
-    public boolean isOffline() {
-        return offline;
-    }
-
-    public void setOffline(boolean offline) {
-        this.offline = offline;
-    }
 
     public int getExportIntervalMillis() {
         return exportIntervalMillis;

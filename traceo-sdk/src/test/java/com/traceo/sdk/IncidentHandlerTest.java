@@ -6,7 +6,7 @@ import com.traceo.sdk.client.TraceoClientConfiguration;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TraceoIncidentHandlerTest {
+public class IncidentHandlerTest {
 
     @Before
     public void setUp() {

@@ -34,14 +34,10 @@ public class CoreClient<T extends ClientCoreConfiguration> {
                 LOGGER.log("You run Traceo SDK with enabled debug option. All internal messages for this SDK will be visible to you.");
             }
 
-//            if (!initSDK()) {
-//                return;
-//            }
-
             LOGGER.log("Traceo SDK has been initialized.");
 
             asyncTransport = new HttpAsyncClient();
-            incidentHandler = new IncidentHandler();
+            incidentHandler = new IncidentHandler(asyncTransport);
 
             shutdownHook();
         } else {
