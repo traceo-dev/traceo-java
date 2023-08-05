@@ -1,6 +1,7 @@
 package com.traceo.sdk.http;
 
 import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.protocol.HttpContext;
 
@@ -23,20 +24,20 @@ public class HttpClient {
         this.httpClient = httpClientFactory.create(config);
     }
 
-    public void execute(IRequest<?> IRequest) throws IOException {
-        this.httpClient.execute(httpRequestFactory.create(IRequest, this.configuration));
+    public CloseableHttpResponse execute(IRequest<?> request) throws IOException {
+        return httpClient.execute(httpRequestFactory.create(request, this.configuration));
     }
 
-    public void execute(IRequest<?> IRequest, ResponseHandler<Void> responseHandler) throws IOException {
-        this.httpClient.execute(httpRequestFactory.create(IRequest, this.configuration), responseHandler);
+    public <T> T execute(IRequest<T> request, ResponseHandler<T> responseHandler) throws IOException {
+        return httpClient.execute(httpRequestFactory.create(request, this.configuration), responseHandler);
     }
 
-    public void execute(IRequest<?> IRequest, HttpContext httpContext) throws IOException {
-        this.httpClient.execute(httpRequestFactory.create(IRequest, this.configuration), null, httpContext);
+    public <T> T execute(IRequest<T> request, HttpContext httpContext) throws IOException {
+        return httpClient.execute(httpRequestFactory.create(request, this.configuration), null, httpContext);
     }
 
-    public void execute(IRequest<?> IRequest, ResponseHandler<Void> responseHandler, HttpContext context) throws IOException {
-        this.httpClient.execute(httpRequestFactory.create(IRequest, this.configuration), responseHandler, context);
+    public <T> T execute(IRequest<T> request, ResponseHandler<T> responseHandler, HttpContext context) throws IOException {
+        return httpClient.execute(httpRequestFactory.create(request, this.configuration), responseHandler, context);
     }
 
     public void shutdown() throws IOException {

@@ -20,10 +20,8 @@ public class HttpClientConfiguration {
 
     private int maxRedirects = 5;
 
-    // Maximum connections per route (host:port)
     private int maxConnPerRoute = 5;
 
-    // Maximum total connections in the pool
     private int maxConnection = 100;
 
     public HttpClientConfiguration() {}

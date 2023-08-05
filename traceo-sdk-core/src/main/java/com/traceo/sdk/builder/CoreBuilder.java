@@ -25,4 +25,14 @@ public abstract class CoreBuilder<Subclass extends CoreBuilder, ConfigurationTyp
         configuration.setHost(host);
         return getSubclass();
     }
+
+    public final Subclass withEnabled(boolean enabled) {
+        configuration.setEnabled(enabled);
+        return getSubclass();
+    }
+
+    public final Subclass withDebug(boolean enabled) {
+        configuration.setDebug(enabled);
+        return getSubclass();
+    }
 }

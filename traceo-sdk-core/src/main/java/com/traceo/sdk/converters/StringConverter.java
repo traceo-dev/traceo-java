@@ -4,8 +4,6 @@ public class StringConverter {
     /**
      *  Method to convert string to header-string:
      *  eq. Some header Key -> some-header-key
-     * @param key
-     * @return
      */
     public static String convertToHeaderKey(String key) {
         if (key == null) {
