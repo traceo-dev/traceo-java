@@ -17,5 +17,9 @@ public interface IRequest<T> {
 
     String getEndpoint();
 
+    void setEndpoint(String endpoint);
+
     T getContent();
+
+    void setContent(T content);
 }

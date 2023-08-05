@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64f6307d-2a79-4da6-bde5-c64cec0b955a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/incident/IncidentHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/ClientCoreConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/ClientCoreConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/CoreBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/CoreBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/client/CoreClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/client/CoreClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/converters/StringConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/converters/StringConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClientConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/HttpClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/HttpClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/exceptionHandler/ExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/ExceptionHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/TraceoIncidentHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/TestIRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/TestIRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +23,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Interface" />
         <option value="JUnit3 Test Class" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -95,38 +92,7 @@
       <recent name="com.traceo.sdk" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HttpClientTest.testLoggerException">
-    <configuration name="ExceptionHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="traceo-sdk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.traceo.sdk.exceptionHandler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.traceo.sdk" />
-      <option name="MAIN_CLASS_NAME" value="com.traceo.sdk.ExceptionHandlerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExceptionHandlerTest.testCaptureException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="traceo-sdk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.traceo.sdk.exceptionHandler.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.traceo.sdk" />
-      <option name="MAIN_CLASS_NAME" value="com.traceo.sdk.ExceptionHandlerTest" />
-      <option name="METHOD_NAME" value="testCaptureException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TraceoIncidentHandlerTest.testCaptureException">
     <configuration name="HttpClientTest.testAsyncExecute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="traceo-sdk" />
       <extension name="coverage">
@@ -175,13 +141,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TraceoIncidentHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="traceo-sdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.traceo.sdk.exceptions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.traceo.sdk" />
+      <option name="MAIN_CLASS_NAME" value="com.traceo.sdk.TraceoIncidentHandlerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TraceoIncidentHandlerTest.testCaptureException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="traceo-sdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.traceo.sdk.exceptions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.traceo.sdk" />
+      <option name="MAIN_CLASS_NAME" value="com.traceo.sdk.TraceoIncidentHandlerTest" />
+      <option name="METHOD_NAME" value="testCaptureException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TraceoIncidentHandlerTest.testCaptureException" />
         <item itemvalue="JUnit.HttpClientTest.testLoggerException" />
         <item itemvalue="JUnit.HttpClientTest.testAsyncExecute" />
         <item itemvalue="JUnit.HttpClientTest.testExecute" />
-        <item itemvalue="JUnit.ExceptionHandlerTest.testCaptureException" />
-        <item itemvalue="JUnit.ExceptionHandlerTest" />
+        <item itemvalue="JUnit.TraceoIncidentHandlerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -196,11 +193,19 @@
       <workItem from="1690979745725" duration="4770000" />
       <workItem from="1691002764505" duration="20779000" />
       <workItem from="1691082682113" duration="35179000" />
-      <workItem from="1691231627153" duration="7143000" />
+      <workItem from="1691231627153" duration="13356000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="asyncTransport.executeAsync(request);" language="JAVA" />
+        <watch expression="httpRequestFactory.create(request, configuration);" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

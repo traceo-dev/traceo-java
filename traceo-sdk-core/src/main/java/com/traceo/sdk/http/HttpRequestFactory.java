@@ -63,15 +63,15 @@ public class HttpRequestFactory implements IHttpRequestFactory {
     private URI createUriEndpoint(IRequest<?> request) {
         String host = CoreClient.getConfigs().getHost();
 
-        StringBuilder stringBuilder = new StringBuilder();
-
-        stringBuilder
-                .append(host)
-                .append("/")
-                .append(Objects.requireNonNullElse(request.getEndpoint(), ""));
-
         try {
-            return new URI(stringBuilder.toString());
+            if (request.getEndpoint() == null) {
+                return new URI(host);
+            }
+
+            String endpoint = !request.getEndpoint().contains("/") ? String.format("/%s", request.getEndpoint()) : request.getEndpoint();
+            String uri = String.format("%s%s", host, Objects.requireNonNullElse(endpoint, "/"));
+
+            return new URI(uri);
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }

@@ -34,6 +34,11 @@ public class TestIRequest implements IRequest<TestIRequest.TestModel> {
     }
 
     @Override
+    public void setEndpoint(String endpoint) {
+
+    }
+
+    @Override
     public Map<String, String> getHeaders() {
         Map<String, String> headers = new HashMap<>();
         headers.put("some-header", "vallllllll");
@@ -46,5 +51,10 @@ public class TestIRequest implements IRequest<TestIRequest.TestModel> {
     public TestIRequest.TestModel getContent() {
         TestModel model = new TestModel("ala", "kota", 1);
         return model;
+    }
+
+    @Override
+    public void setContent(TestModel content) {
+
     }
 }
