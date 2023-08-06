@@ -6,14 +6,32 @@ import com.traceo.sdk.http.IRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Default implementation of the {@link com.traceo.sdk.http.IRequest} interface.
+ * This class should be used only for internal SDK operations.
+ * @param <T> Content type class defined what should be sent in request.
+ */
 public class DefaultRequest<T> implements IRequest<T> {
 
+    /**
+     * Payload which should be sent in request.
+     */
     private T content;
 
+    /**
+     * Headers which should be included in request.
+     */
     private Map<String, String> headers = new HashMap<>();
 
+    /**
+     * {@link com.traceo.sdk.http.HttpMethod} for request.
+     */
     private HttpMethod httpMethod = HttpMethod.POST;
 
+    /**
+     * Path used to build full URI which is needed for request.
+     * URI is created with using provided host in {@link com.traceo.sdk.builder.ClientCoreConfiguration} concatenated with this value.
+     */
     private String endpoint;
 
     public DefaultRequest() {}

@@ -1,10 +1,17 @@
 package com.traceo.sdk.http;
 
-import com.traceo.sdk.exceptions.SDKException;
 import org.apache.http.client.methods.HttpRequestBase;
 
-import java.net.URISyntaxException;
-
+/**
+ * An interface to create request used by {@link com.traceo.sdk.http.HttpAsyncClient} or {@link com.traceo.sdk.http.HttpClient}
+ */
 public interface IHttpRequestFactory {
+
+    /**
+     * Factory method to create http request accepting by http client.
+     * @param IRequest
+     * @param settings
+     * @return {@link org.apache.http.client.methods.HttpRequestBase} accepting by underlying http client for sdk.
+     */
     HttpRequestBase create(IRequest<?> IRequest, HttpClientConfiguration settings);
 }

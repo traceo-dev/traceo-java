@@ -1,24 +1,57 @@
 package com.traceo.sdk;
 
+/**
+ * An item creating after parsing each trace from the stacktrace.
+ */
 public class TraceoTrace {
+    /**
+     * Filename in which exception occur in this trace.
+     */
     private String filename;
 
+    /**
+     * Function name in which exception occur in this trace.
+     */
     private String function;
 
+    /**
+     * Line number in which exception occur in file for this trace.
+     */
     private int lineNo;
 
+    /**
+     * Column number in which exception occur in file for this trace.
+     */
     private int columnNo;
 
+    /**
+     * Specifies whether the exception occurred inside the owner's code or in an external library.
+     */
     private boolean isInternal;
 
+    /**
+     * Absolute path to the file with exception.
+     */
     private String absPath;
 
+    /**
+     * File extension.
+     */
     private String extension;
 
+    /**
+     * Code context for the single line in which exception occur in this file.
+     */
     private String code;
 
+    /**
+     * Code context for the five lines before exception line.
+     */
     private String[] preCode;
 
+    /**
+     * Code context for the five lines after exception line.
+     */
     private String[] postCode;
 
     public String getFilename() {

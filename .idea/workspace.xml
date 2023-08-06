@@ -6,13 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="64f6307d-2a79-4da6-bde5-c64cec0b955a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/CoreBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/CoreBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/DefaultRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/DefaultRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/TraceoIncident.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/TraceoIncident.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/TraceoRuntimePlatform.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/TraceoRuntimePlatform.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/TraceoTrace.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/TraceoTrace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/ClientCoreConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/ClientCoreConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/client/CoreClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/client/CoreClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/incident/IncidentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/incident/IncidentHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpAsyncClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpAsyncClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpAsyncClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpAsyncClientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClientConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpRequestFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IHttpAsyncClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IHttpAsyncClientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IHttpClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IHttpClientFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IHttpRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IHttpRequestFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/logging/ClientLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/logging/ClientLogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClientBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClientBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClientConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/TraceoIncidentHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/IncidentHandlerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/HttpClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/HttpClientTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/IncidentHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/IncidentHandlerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,30 +64,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/pszew/Desktop/traceo-java-sdk&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "last_opened_file_path": "C:/Users/pszew/Desktop/traceo-java-sdk",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
@@ -193,7 +206,7 @@
       <workItem from="1690979745725" duration="4770000" />
       <workItem from="1691002764505" duration="20779000" />
       <workItem from="1691082682113" duration="35179000" />
-      <workItem from="1691231627153" duration="16339000" />
+      <workItem from="1691231627153" duration="20664000" />
     </task>
     <servers />
   </component>
@@ -201,6 +214,15 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/IncidentHandlerTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="asyncTransport.executeAsync(request);" language="JAVA" />

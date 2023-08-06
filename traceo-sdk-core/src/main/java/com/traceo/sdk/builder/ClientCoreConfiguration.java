@@ -1,13 +1,30 @@
 package com.traceo.sdk.builder;
 
+/**
+ * Base client configuration class.
+ */
 public class ClientCoreConfiguration {
 
+    /**
+     * Api key generated in Traceo project.
+     */
     private String apiKey = null;
 
+    /**
+     * The host on which the Traceo instance is running.
+     * Host should be in format: [protocol]://[domain]:[port]
+     */
     private String host = null;
 
+    /**
+     * Specifies whether the SDK should be launched. If not then it will not collect any information.
+     * After changing the settings, it is necessary to restart the entire application.
+     */
     private boolean isEnabled = true;
 
+    /**
+     * Specifies if SDK should display internal logs.
+     */
     private boolean isDebug = false;
 
     public ClientCoreConfiguration() {}

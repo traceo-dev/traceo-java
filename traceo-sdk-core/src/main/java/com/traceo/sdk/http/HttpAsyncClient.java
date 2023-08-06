@@ -11,6 +11,9 @@ import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
 
+/**
+ * Http client to perform async http operations.
+ */
 public class HttpAsyncClient {
     private static final ClientLogger LOGGER = new ClientLogger(HttpAsyncClient.class);
 
@@ -33,16 +36,34 @@ public class HttpAsyncClient {
         this.httpClient.start();
     }
 
+    /**
+     * Execute async operation to sent request.
+     * @param request Implementation of {@link IRequest<?>} interface.
+     * @param callback Callback used after async operation.
+     * @return {@link Future<HttpResponse>}
+     */
     public Future<HttpResponse> executeAsync(IRequest<?> request, FutureCallback<HttpResponse> callback) {
         HttpRequestBase requestBase = httpRequestFactory.create(request, configuration);
         return httpClient.execute(requestBase, callback);
     }
 
+    /**
+     * Execute async operation to sent request.
+     * @param request Implementation of {@link IRequest<?>} interface.
+     * @param context Provided {@link HttpContext} for custom implementation.
+     * @param callback Callback used after async operation.
+     * @return {@link Future<HttpResponse>}
+     */
     public Future<HttpResponse> executeAsync(IRequest<?> request, HttpContext context, FutureCallback<HttpResponse> callback) {
         HttpRequestBase requestBase = httpRequestFactory.create(request, configuration);
         return httpClient.execute(requestBase, context, callback);
     }
 
+    /**
+     * Execute async operation to sent request.
+     * @param request Implementation of {@link IRequest<?>} interface.
+     * @return {@link Future<HttpResponse>}
+     */
     public Future<HttpResponse> executeAsync(IRequest<?> request) {
         Future<HttpResponse> futureResponse = null;
         latch = new CountDownLatch(1);

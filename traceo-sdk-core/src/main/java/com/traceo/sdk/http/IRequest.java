@@ -1,7 +1,5 @@
 package com.traceo.sdk.http;
 
-import java.io.InputStream;
-import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map;
 

@@ -32,6 +32,12 @@ public class ClientLogger {
         printMessage(LogLevel.ERROR, message, args);
     }
 
+    /**
+     * Method to log exception with provided custom message.
+     *
+     * @param message Custom message for exception.
+     * @param throwable Catched exception.
+     */
     public <T extends Throwable> T logThrowableWithMessage(String message, T throwable) {
         Objects.requireNonNull(throwable, "Throwable cannot be null.");
         printMessage(LogLevel.ERROR, String.format("%s %s", message, ThrowableUtils.stacktraceToString(throwable)));
@@ -39,6 +45,10 @@ public class ClientLogger {
         return throwable;
     }
 
+    /**
+     * Log parsed exception.
+     * @param throwable Exception
+     */
     public <T extends Throwable> T logThrowable(T throwable) {
         Objects.requireNonNull(throwable, "Throwable cannot be null.");
         printMessage(LogLevel.ERROR, ThrowableUtils.stacktraceToString(throwable));

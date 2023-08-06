@@ -20,7 +20,7 @@ public class HttpClientFactory implements IHttpClientFactory {
                         .build())
                 .setUserAgent(configs.getUserAgent());
 
-        if (!configs.isWithCompression()) {
+        if (!configs.isCompression()) {
             builder.disableContentCompression();
         }
 

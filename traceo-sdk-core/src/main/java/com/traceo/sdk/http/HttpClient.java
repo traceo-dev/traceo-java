@@ -7,6 +7,9 @@ import org.apache.http.protocol.HttpContext;
 
 import java.io.IOException;
 
+/**
+ * Http client to perform sync http operations.
+ */
 public class HttpClient {
 
     public static final HttpClientFactory httpClientFactory = new HttpClientFactory();

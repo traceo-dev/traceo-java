@@ -3,7 +3,7 @@ package com.traceo.sdk.client;
 import com.traceo.sdk.builder.CoreBuilder;
 
 /**
- * Builder for creating configuration for {@link com.traceo.sdk.client.TraceoClient}.
+ * Builder to create configuration for {@link com.traceo.sdk.client.TraceoClient}.
  */
 public class TraceoClientBuilder extends CoreBuilder<TraceoClientBuilder, TraceoClientConfiguration> {
     protected TraceoClientBuilder() {

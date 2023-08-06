@@ -24,9 +24,6 @@ public class HttpClientTest {
                 .standard()
                 .withApiKey("xxx")
                 .withHost("https://webhook.site/488164a0-5467-4621-9212-2974cc3eebc7/")
-                .withExportIntervalMs(12345)
-                .withMetricsCollection(true)
-                .withOfflineMode(false)
                 .withDebug(true)
                 .build();
 

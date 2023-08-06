@@ -4,14 +4,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TraceoIncident {
+    /**
+     * Name of the captured incident. In case of this SDK
+     * name is defined by class name of the occured exception
+     * eq. java.lang.NullPointerException.
+     */
     private String name;
 
+    /**
+     * Name of the captured incident. In case of this SDK
+     * name is defined by class name of the occured exception
+     * eq. java.lang.NullPointerException.
+     */
     private String message;
 
+    /**
+     * Full stacktrace of the captured exception.
+     */
     private String stack;
 
+    /**
+     * Information about runtime platform on which exception has been catched.
+     */
     private TraceoRuntimePlatform platform = new TraceoRuntimePlatform();
 
+    /**
+     * List of objects contains information about each trace included in stacktrace.
+     */
     private List<TraceoTrace> traces = new ArrayList<>();
 
     public TraceoIncident() {}

@@ -8,15 +8,29 @@ import org.apache.commons.logging.Log;
 
 import java.io.IOException;
 
+/**
+ * Base client class to use in client SDKs.
+ * @param <T>
+ */
 public class CoreClient<T extends ClientCoreConfiguration> {
     private final static ClientLogger LOGGER = new ClientLogger(CoreClient.class);
+
+    /** The main configuration for client. **/
     private static volatile ClientCoreConfiguration configuration;
+
+    /** Async http client implementation to use inside client. **/
     public static HttpAsyncClient asyncTransport;
+
+    /** Handler for captured incidents. **/
     public static IncidentHandler incidentHandler;
 
     protected CoreClient() {}
 
-//    synchronized ensuring that only one thread should call this method
+
+    /**
+     * Method to initialized entire SDK.
+     * @param clientConfiguration Class with configuration options for client.
+     */
     public static synchronized <T extends ClientCoreConfiguration> void init(T clientConfiguration) {
         configuration = clientConfiguration;
 
@@ -31,7 +45,7 @@ public class CoreClient<T extends ClientCoreConfiguration> {
             }
 
             if (clientConfiguration.isDebug()) {
-                LOGGER.log("You run Traceo SDK with enabled debug option. All internal messages for this SDK will be visible to you.");
+                LOGGER.log("You run Traceo SDK with enabled debug option.");
             }
 
             LOGGER.log("Traceo SDK has been initialized.");
@@ -45,6 +59,10 @@ public class CoreClient<T extends ClientCoreConfiguration> {
         }
     }
 
+    /**
+     * Return configuration for this client.
+     * @return Configuration for this client.
+     */
     public static <T extends ClientCoreConfiguration> T getConfigs() {
         return (T) configuration;
     }

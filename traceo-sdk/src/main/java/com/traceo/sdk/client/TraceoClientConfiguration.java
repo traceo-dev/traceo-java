@@ -4,9 +4,16 @@ import com.traceo.sdk.builder.ClientCoreConfiguration;
 
 public class TraceoClientConfiguration extends ClientCoreConfiguration {
 
+    /**
+     * Determine whether to collect basic metrics.
+     */
     private boolean collectMetrics = false;
 
-    private int exportIntervalMillis = 15000;
+    /**
+     * Interval specifying the time at which basic metrics are to be collected.
+     * Value provided in milliseconds.
+     */
+    private int exportIntervalMillis = 5000;
 
     public TraceoClientConfiguration() {}
 

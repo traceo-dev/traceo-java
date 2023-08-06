@@ -15,6 +15,9 @@ import java.net.URISyntaxException;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * Factory class responsible for creating request based on {@link HttpRequestBase} object.
+ */
 public class HttpRequestFactory implements IHttpRequestFactory {
 
     private static final String CHARSET_ENCODING = "UTF-8";
