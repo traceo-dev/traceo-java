@@ -72,7 +72,7 @@ public class HttpRequestFactory implements IHttpRequestFactory {
             }
 
             String endpoint = !request.getEndpoint().contains("/") ? String.format("/%s", request.getEndpoint()) : request.getEndpoint();
-            String uri = String.format("%s%s", host, Objects.requireNonNullElse(endpoint, "/"));
+            String uri = String.format("%s%s", host, endpoint);
 
             return new URI(uri);
         } catch (URISyntaxException e) {

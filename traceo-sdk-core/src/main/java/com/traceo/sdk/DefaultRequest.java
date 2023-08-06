@@ -30,7 +30,7 @@ public class DefaultRequest<T> implements IRequest<T> {
 
     /**
      * Path used to build full URI which is needed for request.
-     * URI is created with using provided host in {@link com.traceo.sdk.builder.ClientCoreConfiguration} concatenated with this value.
+     * URI is created with using provided host in {@link ClientOptions} concatenated with this value.
      */
     private String endpoint;
 

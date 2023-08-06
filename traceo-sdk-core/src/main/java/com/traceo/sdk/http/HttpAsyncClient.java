@@ -7,6 +7,7 @@ import org.apache.http.concurrent.FutureCallback;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 import org.apache.http.protocol.HttpContext;
 
+import java.io.Closeable;
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
@@ -14,7 +15,7 @@ import java.util.concurrent.Future;
 /**
  * Http client to perform async http operations.
  */
-public class HttpAsyncClient {
+public class HttpAsyncClient implements IHttpClient<Future<HttpResponse>, FutureCallback<HttpResponse>>, Closeable {
     private static final ClientLogger LOGGER = new ClientLogger(HttpAsyncClient.class);
 
     public static final HttpAsyncClientFactory httpClientFactory = new HttpAsyncClientFactory();
@@ -42,9 +43,20 @@ public class HttpAsyncClient {
      * @param callback Callback used after async operation.
      * @return {@link Future<HttpResponse>}
      */
-    public Future<HttpResponse> executeAsync(IRequest<?> request, FutureCallback<HttpResponse> callback) {
-        HttpRequestBase requestBase = httpRequestFactory.create(request, configuration);
-        return httpClient.execute(requestBase, callback);
+    @Override
+    public Future<HttpResponse> execute(IRequest<?> request, FutureCallback<HttpResponse> callback) {
+        return execute(request, callback, null);
+    }
+
+    /**
+     * Execute async operation to sent request.
+     * @param request Implementation of {@link IRequest<?>} interface.
+     * @param context Provided {@link HttpContext} for custom implementation.
+     * @return {@link Future<HttpResponse>}
+     */
+    @Override
+    public Future<HttpResponse> execute(IRequest<?> request, HttpContext context) {
+        return execute(request, null, context);
     }
 
     /**
@@ -54,7 +66,8 @@ public class HttpAsyncClient {
      * @param callback Callback used after async operation.
      * @return {@link Future<HttpResponse>}
      */
-    public Future<HttpResponse> executeAsync(IRequest<?> request, HttpContext context, FutureCallback<HttpResponse> callback) {
+    @Override
+    public Future<HttpResponse> execute(IRequest<?> request, FutureCallback<HttpResponse> callback, HttpContext context) {
         HttpRequestBase requestBase = httpRequestFactory.create(request, configuration);
         return httpClient.execute(requestBase, context, callback);
     }
@@ -64,7 +77,8 @@ public class HttpAsyncClient {
      * @param request Implementation of {@link IRequest<?>} interface.
      * @return {@link Future<HttpResponse>}
      */
-    public Future<HttpResponse> executeAsync(IRequest<?> request) {
+    @Override
+    public Future<HttpResponse> execute(IRequest<?> request) {
         Future<HttpResponse> futureResponse = null;
         latch = new CountDownLatch(1);
         HttpRequestBase requestBase = httpRequestFactory.create(request, configuration);
@@ -109,5 +123,10 @@ public class HttpAsyncClient {
     public void closeHttpClient() throws IOException {
         LOGGER.log("Http client has been shutdown.");
         this.httpClient.close();
+    }
+
+    @Override
+    public void close() throws IOException {
+        closeHttpClient();
     }
 }

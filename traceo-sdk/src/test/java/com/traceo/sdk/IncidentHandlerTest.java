@@ -15,6 +15,7 @@ public class IncidentHandlerTest {
                 .withApiKey("xxx")
                 .withHost("https://webhook.site/488164a0-5467-4621-9212-2974cc3eebc7/")
                 .withDebug(true)
+                .withCatchUncaughtException(true)
                 .build();
 
         TraceoClient.init(configs);
@@ -23,9 +24,11 @@ public class IncidentHandlerTest {
     @Test
     public void testCaptureException() throws ClassNotFoundException {
         try {
-            throw new NullPointerException("Bardzo fajny exception");
+//            throw new NullPointerException("Bardzo fajny exception");
+            double value = 1 / 0;
+            System.out.println(value);
         } catch (NullPointerException exception) {
-            TraceoClient.catchException("CO TO KURWA MA BYĆ", exception);
+//            TraceoClient.catchException("CO TO KURWA MA BYĆ", exception);
         }
     }
 }

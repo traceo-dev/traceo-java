@@ -1,12 +1,13 @@
 package com.traceo.sdk.client;
 
+import com.traceo.sdk.ClientOptions;
 import com.traceo.sdk.EventCallback;
 import com.traceo.sdk.TraceoIncident;
 
 /**
  * Entry point for accessing Traceo SDK.
  */
-public final class TraceoClient extends CoreClient<TraceoClientConfiguration> {
+public final class TraceoClient extends CoreClient<ClientOptions> {
 
     private TraceoClient() {}
 

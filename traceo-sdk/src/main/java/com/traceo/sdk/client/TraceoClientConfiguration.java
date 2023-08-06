@@ -1,8 +1,8 @@
 package com.traceo.sdk.client;
 
-import com.traceo.sdk.builder.ClientCoreConfiguration;
+import com.traceo.sdk.ClientOptions;
 
-public class TraceoClientConfiguration extends ClientCoreConfiguration {
+public class TraceoClientConfiguration extends ClientOptions {
 
     /**
      * Determine whether to collect basic metrics.

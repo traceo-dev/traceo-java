@@ -1,7 +1,6 @@
 package com.traceo.sdk.http;
 
 import org.apache.http.client.config.RequestConfig;
-import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.config.ConnectionConfig;
 import org.apache.http.impl.nio.client.CloseableHttpAsyncClient;
 import org.apache.http.impl.nio.client.HttpAsyncClients;
@@ -11,7 +10,13 @@ import java.nio.charset.StandardCharsets;
 /**
  * Factory class responsible for creating request based on {@link CloseableHttpAsyncClient} object.
  */
-public class HttpAsyncClientFactory implements IHttpAsyncClientFactory {
+public class HttpAsyncClientFactory implements IHttpClientFactory<CloseableHttpAsyncClient> {
+
+    @Override
+    public CloseableHttpAsyncClient create() {
+        return  create(new HttpClientConfiguration());
+    }
+
     @Override
     public CloseableHttpAsyncClient create(HttpClientConfiguration configs) {
 

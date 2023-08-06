@@ -1,15 +1,20 @@
 package com.traceo.sdk.http;
 
-import org.apache.http.impl.client.CloseableHttpClient;
-
 /**
- * An interface to create http client instance.
+ * An interface to create asynchronous http client instance.
  */
-public interface IHttpClientFactory {
+public interface IHttpClientFactory<T> {
+
     /**
-     * Factory method to create http incstance.
-     * @param settings Configuration for http client.
-     * @return {@link org.apache.http.impl.client.CloseableHttpClient instance}
+     * Factory method to create asynchronous http instance with default http configs.
+     * @return {@link T instance}
      */
-    CloseableHttpClient create(HttpClientConfiguration settings);
+    T create();
+
+    /**
+     * Factory method to create asynchronous http instance.
+     * @param configs Configuration for http client.
+     * @return {@link T instance}
+     */
+    T create(HttpClientConfiguration configs);
 }

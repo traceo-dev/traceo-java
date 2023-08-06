@@ -41,7 +41,7 @@ public class HttpClientTest {
     public void testAsyncExecute() throws ExecutionException, InterruptedException {
         HttpAsyncClient httpClient = new HttpAsyncClient();
         TestIRequest request = new TestIRequest();
-        Future<HttpResponse> httpResponseFuture = httpClient.executeAsync(request);
+        Future<HttpResponse> httpResponseFuture = httpClient.execute(request);
         HttpResponse response = httpResponseFuture.get();
     }
 

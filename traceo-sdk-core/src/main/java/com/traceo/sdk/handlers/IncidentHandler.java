@@ -1,7 +1,6 @@
-package com.traceo.sdk.incident;
+package com.traceo.sdk.handlers;
 
 import com.traceo.sdk.*;
-import com.traceo.sdk.http.HttpAsyncClient;
 import com.traceo.sdk.logging.ClientLogger;
 import com.traceo.sdk.utils.ThrowableUtils;
 
@@ -14,10 +13,14 @@ import static com.traceo.sdk.client.CoreClient.getConfigs;
 public class IncidentHandler {
     private final static ClientLogger LOGGER = new ClientLogger(IncidentHandler.class);
 
-    private static HttpAsyncClient httpAsyncClient;
+    private final ClientOptions options;
 
-    public IncidentHandler(HttpAsyncClient httpClient) {
-        this.httpAsyncClient = httpClient;
+    public IncidentHandler() {
+        this(new ClientOptions());
+    }
+
+    public IncidentHandler(ClientOptions options) {
+        this.options = options;
     }
 
     public void catchException(Throwable throwable, String message, EventCallback<TraceoIncident> callback) {
@@ -41,7 +44,7 @@ public class IncidentHandler {
         request.setEndpoint("/incident");
 
         try {
-            httpAsyncClient.executeAsync(request);
+            options.getHttpClient().execute(request);
         } catch (Throwable e) {
             LOGGER.error("Failed to send exception.", e);
         }

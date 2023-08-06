@@ -1,5 +1,6 @@
 package com.traceo.sdk.client;
 
+import com.traceo.sdk.ClientOptions;
 import com.traceo.sdk.builder.CoreBuilder;
 
 /**

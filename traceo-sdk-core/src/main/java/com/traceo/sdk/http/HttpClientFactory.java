@@ -5,7 +5,12 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 
-public class HttpClientFactory implements IHttpClientFactory {
+public class HttpClientFactory implements IHttpClientFactory<CloseableHttpClient> {
+
+    @Override
+    public CloseableHttpClient create() {
+        return create(new HttpClientConfiguration());
+    }
 
     @Override
     public CloseableHttpClient create(HttpClientConfiguration configs) {
