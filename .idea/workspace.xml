@@ -5,26 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64f6307d-2a79-4da6-bde5-c64cec0b955a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/DefaultRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/DefaultRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/ClientCoreConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/ClientOptions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/CoreBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/builder/CoreBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/client/CoreClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/client/CoreClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/handlers/IncidentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/handlers/IncidentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/handlers/UncaughtExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/handlers/UncaughtExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpAsyncClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpAsyncClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpAsyncClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpAsyncClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpRequestFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/HttpRequestFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IHttpAsyncClientFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IHttpClientFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/http/IHttpClientFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/incident/IncidentHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/handlers/IncidentHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/logging/ClientLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/logging/internal/SDKLogger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/logging/LogLevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/logging/internal/LogLevel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClientBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClientBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClientConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/main/java/com/traceo/sdk/client/TraceoClientConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/HttpClientTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/HttpClientTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/IncidentHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/traceo-sdk/src/test/java/com/traceo/sdk/IncidentHandlerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +93,7 @@
       <recent name="com.traceo.sdk" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HttpClientTest.testAsyncExecute">
+  <component name="RunManager" selected="JUnit.HttpClientTest.testLogger">
     <configuration name="HttpClientTest.testAsyncExecute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="traceo-sdk" />
       <extension name="coverage">
@@ -137,6 +126,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HttpClientTest.testLogger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="traceo-sdk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.traceo.sdk.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.traceo.sdk" />
+      <option name="MAIN_CLASS_NAME" value="com.traceo.sdk.HttpClientTest" />
+      <option name="METHOD_NAME" value="testLogger" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HttpClientTest.testLoggerException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="traceo-sdk" />
       <extension name="coverage">
@@ -149,21 +154,6 @@
       <option name="MAIN_CLASS_NAME" value="com.traceo.sdk.HttpClientTest" />
       <option name="METHOD_NAME" value="testLoggerException" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IncidentHandlerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="traceo-sdk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.traceo.sdk.exceptions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.traceo.sdk" />
-      <option name="MAIN_CLASS_NAME" value="com.traceo.sdk.IncidentHandlerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,8 +176,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HttpClientTest.testLoggerException" />
+        <item itemvalue="JUnit.HttpClientTest.testLogger" />
         <item itemvalue="JUnit.HttpClientTest.testAsyncExecute" />
+        <item itemvalue="JUnit.HttpClientTest.testLoggerException" />
         <item itemvalue="JUnit.HttpClientTest.testExecute" />
       </list>
     </recent_temporary>
@@ -204,7 +195,7 @@
       <workItem from="1691002764505" duration="20779000" />
       <workItem from="1691082682113" duration="35179000" />
       <workItem from="1691231627153" duration="33946000" />
-      <workItem from="1691344538503" duration="5414000" />
+      <workItem from="1691344538503" duration="19750000" />
     </task>
     <servers />
   </component>
@@ -212,13 +203,19 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/traceo-sdk-core/src/main/java/com/traceo/sdk/logging/client/sender/LogsSender.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
-        <watch expression="stackTraceElement.getClassName()" language="JAVA" />
-        <watch expression="options.isCatchUncaughtException()" language="JAVA" />
-        <watch expression="options.getHandlers()" language="JAVA" />
-        <watch expression="Thread.getDefaultUncaughtExceptionHandler()" language="JAVA" />
-        <watch expression="Thread.getDefaultUncaughtExceptionHandler()" language="JAVA" />
+        <watch expression="logger.getName()" language="JAVA" />
+        <watch expression="((SimpleLogger) logger).getFormattedDate()" language="JAVA" custom="org.slf4j.impl.SimpleLogger" />
       </configuration>
     </watches-manager>
   </component>

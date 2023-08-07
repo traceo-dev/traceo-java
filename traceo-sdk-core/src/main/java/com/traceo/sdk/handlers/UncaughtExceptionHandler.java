@@ -2,7 +2,7 @@ package com.traceo.sdk.handlers;
 
 import com.traceo.sdk.ClientOptions;
 import com.traceo.sdk.IHandler;
-import com.traceo.sdk.logging.ClientLogger;
+import com.traceo.sdk.logging.internal.SDKLogger;
 
 /**
  * Handler for uncaught exceptions.
@@ -14,7 +14,7 @@ import com.traceo.sdk.logging.ClientLogger;
  */
 public class UncaughtExceptionHandler implements Thread.UncaughtExceptionHandler, IHandler {
 
-    private static final ClientLogger LOGGER = new ClientLogger(UncaughtExceptionHandler.class);
+    private static final SDKLogger LOGGER = new SDKLogger(UncaughtExceptionHandler.class);
 
     private static IncidentHandler incidentHandler;
     private ClientOptions options;

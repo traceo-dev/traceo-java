@@ -1,11 +1,12 @@
 package com.traceo.sdk;
 
+import com.traceo.sdk.logging.client.TraceoLogger;
 import com.traceo.sdk.http.HttpAsyncClient;
 import com.traceo.sdk.http.HttpClient;
 import com.traceo.sdk.client.TraceoClient;
 import com.traceo.sdk.client.TraceoClientBuilder;
 import com.traceo.sdk.client.TraceoClientConfiguration;
-import com.traceo.sdk.logging.ClientLogger;
+import com.traceo.sdk.logging.internal.SDKLogger;
 import org.apache.http.HttpResponse;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +17,7 @@ import java.util.concurrent.Future;
 
 public class HttpClientTest {
 
-    private final static ClientLogger LOGGER = new ClientLogger(HttpClient.class);
+    private final static SDKLogger LOGGER = new SDKLogger(HttpClient.class);
 
     @Before
     public void setUp() {
@@ -28,6 +29,14 @@ public class HttpClientTest {
                 .build();
 
         TraceoClient.init(configs);
+    }
+
+    @Test
+    public void testLogger() {
+        TraceoLogger traceoLogger = TraceoClient.getLogger(HttpClientTest.class.getName());
+        for (int i=0; i< 50; i++) {
+            traceoLogger.log("xxxxxxxxxxxxxx", i);
+        }
     }
 
     @Test

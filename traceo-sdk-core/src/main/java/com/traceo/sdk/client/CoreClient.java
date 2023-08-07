@@ -5,7 +5,7 @@ import com.traceo.sdk.IHandler;
 import com.traceo.sdk.http.HttpAsyncClient;
 import com.traceo.sdk.handlers.IncidentHandler;
 import com.traceo.sdk.handlers.UncaughtExceptionHandler;
-import com.traceo.sdk.logging.ClientLogger;
+import com.traceo.sdk.logging.internal.SDKLogger;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -15,7 +15,7 @@ import java.io.IOException;
  * @param <T>
  */
 public class CoreClient<T extends ClientOptions> implements Closeable {
-    private final static ClientLogger LOGGER = new ClientLogger(CoreClient.class);
+    private final static SDKLogger LOGGER = new SDKLogger(CoreClient.class);
 
     /** The main configuration for client. **/
     private static volatile ClientOptions configuration;

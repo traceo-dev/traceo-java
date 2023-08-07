@@ -1,7 +1,7 @@
 package com.traceo.sdk.handlers;
 
 import com.traceo.sdk.*;
-import com.traceo.sdk.logging.ClientLogger;
+import com.traceo.sdk.logging.internal.SDKLogger;
 import com.traceo.sdk.utils.ThrowableUtils;
 
 import java.net.URL;
@@ -11,7 +11,7 @@ import java.util.List;
 import static com.traceo.sdk.client.CoreClient.getConfigs;
 
 public class IncidentHandler {
-    private final static ClientLogger LOGGER = new ClientLogger(IncidentHandler.class);
+    private final static SDKLogger LOGGER = new SDKLogger(IncidentHandler.class);
 
     private final ClientOptions options;
 
@@ -34,16 +34,13 @@ public class IncidentHandler {
             return;
         }
 
-        TraceoIncident traceoIncident = processIncident(throwable, message);
+        TraceoIncident payload = processIncident(throwable, message);
         if (callback != null) {
-            callback.run(traceoIncident);
+            callback.run(payload);
         }
 
-        DefaultRequest<TraceoIncident> request = new DefaultRequest<>();
-        request.setContent(traceoIncident);
-        request.setEndpoint("/incident");
-
         try {
+            DefaultRequest<TraceoIncident> request = new DefaultRequest<>("/incident", payload);
             options.getHttpClient().execute(request);
         } catch (Throwable e) {
             LOGGER.error("Failed to send exception.", e);

@@ -1,4 +1,4 @@
-package com.traceo.sdk.logging;
+package com.traceo.sdk.logging.internal;
 
 import com.traceo.sdk.client.CoreClient;
 import com.traceo.sdk.utils.ThrowableUtils;
@@ -10,10 +10,10 @@ import java.util.Objects;
 /**
  * Internal client logger based on Slf4j.
  */
-public class ClientLogger {
+public class SDKLogger {
     private final Logger logger;
 
-    public ClientLogger(Class<?> clazz) {
+    public SDKLogger(Class<?> clazz) {
         String className = clazz.getName();
         Logger initLogger = LoggerFactory.getLogger(className);
 

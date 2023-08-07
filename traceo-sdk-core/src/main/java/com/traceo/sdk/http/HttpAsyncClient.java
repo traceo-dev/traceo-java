@@ -1,6 +1,6 @@
 package com.traceo.sdk.http;
 
-import com.traceo.sdk.logging.ClientLogger;
+import com.traceo.sdk.logging.internal.SDKLogger;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.concurrent.FutureCallback;
@@ -16,7 +16,7 @@ import java.util.concurrent.Future;
  * Http client to perform async http operations.
  */
 public class HttpAsyncClient implements IHttpClient<Future<HttpResponse>, FutureCallback<HttpResponse>>, Closeable {
-    private static final ClientLogger LOGGER = new ClientLogger(HttpAsyncClient.class);
+    private static final SDKLogger LOGGER = new SDKLogger(HttpAsyncClient.class);
 
     public static final HttpAsyncClientFactory httpClientFactory = new HttpAsyncClientFactory();
     private final HttpRequestFactory httpRequestFactory = new HttpRequestFactory();
