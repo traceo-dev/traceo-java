@@ -13,7 +13,7 @@ public final class TraceoClient extends CoreClient<ClientOptions> {
     private TraceoClient() {}
 
     /**
-     *
+     * Log message to console and persist them in Traceo platform.
      * @return
      */
     public static TraceoLogger getLogger() {
@@ -21,8 +21,8 @@ public final class TraceoClient extends CoreClient<ClientOptions> {
     }
 
     /**
-     *
-     * @param clazz
+     * Log message to console and persist them in Traceo platform.
+     * @param clazz Class where logger is used.
      * @return
      */
     public static TraceoLogger getLogger(Class<?> clazz) {
@@ -30,8 +30,8 @@ public final class TraceoClient extends CoreClient<ClientOptions> {
     }
 
     /**
-     *
-     * @param name
+     * Log message to console and persist them in Traceo platform.
+     * @param name Custom logger name.
      * @return
      */
     public static TraceoLogger getLogger(String name) {
