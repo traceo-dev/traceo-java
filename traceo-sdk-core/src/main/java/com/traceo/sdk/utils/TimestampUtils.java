@@ -6,7 +6,7 @@ import java.util.Date;
 public class TimestampUtils {
 
     public static long getCurrentUnixTimestamp() {
-        return System.currentTimeMillis() / 1000;
+        return System.currentTimeMillis();
     }
 
     public static String getCurrentTimestamp() {

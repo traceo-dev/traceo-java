@@ -41,7 +41,13 @@ public class LogsHandler {
             className = logger.getName();
         }
 
-        TraceoLog log = new TraceoLog(message, level, className, argsToResources(args));
+        StringBuilder logMsg = new StringBuilder(String.format("[%s] %s", className, message));
+
+        for (Object arg : args) {
+            logMsg.append(" ").append(arg.toString());
+        }
+
+        TraceoLog log = new TraceoLog(logMsg.toString(), level, className, argsToResources(args));
         logsPool.add(log);
 
         if (logsPool.size() >= MAX_LOGS_IN_POOL) {
@@ -73,7 +79,7 @@ public class LogsHandler {
         }
 
         try {
-            DefaultRequest<List<TraceoLog>> request = new DefaultRequest<>("/logs", logsPool);
+            DefaultRequest<List<TraceoLog>> request = new DefaultRequest<>("/api/capture/log", logsPool);
             Future<HttpResponse> response = (Future<HttpResponse>) clientOptions.getHttpClient().execute(request);
             int statusCode = response.get().getStatusLine().getStatusCode();
             if (statusCode == 200) {

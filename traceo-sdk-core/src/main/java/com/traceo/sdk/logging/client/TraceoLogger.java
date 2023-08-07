@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class TraceoLogger implements Ilogger {
 
-    private static final String BASE_LOGGER_NAME = "TraceoLogger";
+    private static final String BASE_LOGGER_NAME = "com.traceo.sdk.logging.client.TraceoLogger";
 
     private static ClientOptions clientOptions = new ClientOptions();
 

@@ -40,7 +40,7 @@ public class IncidentHandler {
         }
 
         try {
-            DefaultRequest<TraceoIncident> request = new DefaultRequest<>("/incident", payload);
+            DefaultRequest<TraceoIncident> request = new DefaultRequest<>("/api/capture/incident", payload);
             options.getHttpClient().execute(request);
         } catch (Throwable e) {
             LOGGER.error("Failed to send exception.", e);
@@ -79,10 +79,10 @@ public class IncidentHandler {
 
             String[] splitFilename = stackTraceElement.getFileName().split("\\.");
             if (splitFilename.length > 1) {
-                trace.setFilename(splitFilename[0]);
                 trace.setExtension(splitFilename[1]);
             }
 
+            trace.setFilename(stackTraceElement.getFileName());
             trace.setLineNo(stackTraceElement.getLineNumber());
             trace.setAbsPath(stackTraceElement.getClassName());
 

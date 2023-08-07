@@ -89,10 +89,10 @@ public class HttpAsyncClient implements IHttpClient<Future<HttpResponse>, Future
                 public void completed(HttpResponse httpResponse) {
                     int statusCode = httpResponse.getStatusLine().getStatusCode();
 
-                    if (statusCode != 200) {
-                        LOGGER.error("Failed to send request. Received status code: {}", statusCode);
-                    } else {
+                    if (statusCode >= 200 && statusCode <= 300) {
                         LOGGER.log("Request has been send successfully.");
+                    } else {
+                        LOGGER.error("Failed to send request. Received status code: {}", statusCode);
                     }
 
                     latch.countDown();
