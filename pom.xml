@@ -15,6 +15,7 @@
     </modules>
 
     <properties>
+        <traceo.core.version>1.0.0</traceo.core.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,6 +25,7 @@
         <jackson.databind.version>2.13.0</jackson.databind.version>
         <mockito.core.version>3.11.2</mockito.core.version>
         <slf4j.api.version>1.7.36</slf4j.api.version>
+        <opentelemetry.version>1.28.0</opentelemetry.version>
     </properties>
 
 </project>

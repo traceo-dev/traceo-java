@@ -1,7 +1,6 @@
 package com.traceo.sdk;
 
-import com.traceo.sdk.http.HttpAsyncClient;
-import com.traceo.sdk.http.IHttpClient;
+import com.traceo.sdk.http.IHttpAsyncClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,9 +43,9 @@ public class ClientOptions {
     private List<IHandler> handlers = new ArrayList<>();
 
     /**
-     * Http client used to requests.
+     * Http client used to http requests.
      */
-    private IHttpClient<?,?> httpClient;
+    private IHttpAsyncClient httpClient;
 
     public ClientOptions() {}
 
@@ -64,11 +63,11 @@ public class ClientOptions {
         this.handlers = handlers;
     }
 
-    public IHttpClient<?, ?> getHttpClient() {
+    public IHttpAsyncClient getHttpClient() {
         return httpClient;
     }
 
-    public void setHttpClient(IHttpClient<?, ?> httpClient) {
+    public void setHttpClient(IHttpAsyncClient httpClient) {
         this.httpClient = httpClient;
     }
 

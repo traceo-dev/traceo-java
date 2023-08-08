@@ -9,14 +9,13 @@ import org.apache.http.protocol.HttpContext;
 
 import java.io.Closeable;
 import java.io.IOException;
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Future;
 
 /**
  * Http client to perform async http operations.
  */
-public class HttpAsyncClient implements IHttpClient<Future<HttpResponse>, FutureCallback<HttpResponse>>, Closeable {
-    private static final SDKLogger LOGGER = new SDKLogger(HttpAsyncClient.class);
+public class HttpAsyncAsyncClient implements IHttpAsyncClient, Closeable {
+    private static final SDKLogger LOGGER = new SDKLogger(HttpAsyncAsyncClient.class);
 
     public static final HttpAsyncClientFactory httpClientFactory = new HttpAsyncClientFactory();
     private final HttpRequestFactory httpRequestFactory = new HttpRequestFactory();
@@ -24,13 +23,11 @@ public class HttpAsyncClient implements IHttpClient<Future<HttpResponse>, Future
     public final CloseableHttpAsyncClient httpClient;
     private final HttpClientConfiguration configuration;
 
-    private CountDownLatch latch;
-
-    public HttpAsyncClient() {
+    public HttpAsyncAsyncClient() {
         this(new HttpClientConfiguration());
     }
 
-    public HttpAsyncClient(HttpClientConfiguration config) {
+    public HttpAsyncAsyncClient(HttpClientConfiguration config) {
         this.configuration = config;
         this.httpClient = httpClientFactory.create(config);
 
@@ -79,45 +76,30 @@ public class HttpAsyncClient implements IHttpClient<Future<HttpResponse>, Future
      */
     @Override
     public Future<HttpResponse> execute(IRequest<?> request) {
-        Future<HttpResponse> futureResponse = null;
-        latch = new CountDownLatch(1);
         HttpRequestBase requestBase = httpRequestFactory.create(request, configuration);
 
-        try {
-            futureResponse = httpClient.execute(requestBase, new FutureCallback<HttpResponse>() {
-                @Override
-                public void completed(HttpResponse httpResponse) {
-                    int statusCode = httpResponse.getStatusLine().getStatusCode();
+        return httpClient.execute(requestBase, new FutureCallback<HttpResponse>() {
+            @Override
+            public void completed(HttpResponse httpResponse) {
+                int statusCode = httpResponse.getStatusLine().getStatusCode();
 
-                    if (statusCode >= 200 && statusCode <= 300) {
-                        LOGGER.log("Request has been send successfully.");
-                    } else {
-                        LOGGER.error("Failed to send request. Received status code: {}", statusCode);
-                    }
-
-                    latch.countDown();
+                if (statusCode >= 200 && statusCode <= 300) {
+                    LOGGER.log("Request has been send successfully.");
+                } else {
+                    LOGGER.error("Failed to send request. Received status code: {}", statusCode);
                 }
+            }
 
-                @Override
-                public void failed(Exception e) {
-                    LOGGER.logThrowableWithMessage("Failed to send requests. ", e);
-                    latch.countDown();
-                }
+            @Override
+            public void failed(Exception e) {
+                LOGGER.logThrowableWithMessage("Failed to send requests. ", e);
+            }
 
-                @Override
-                public void cancelled() {
-                    LOGGER.log("Request has been cancelled.");
-                    latch.countDown();
-                }
-            });
-
-            latch.await();
-        } catch (Throwable e) {
-            LOGGER.logThrowableWithMessage("Error while making http request.", e);
-            latch.countDown();
-        }
-
-        return futureResponse;
+            @Override
+            public void cancelled() {
+                LOGGER.log("Request has been cancelled.");
+            }
+        });
     }
 
     public void closeHttpClient() throws IOException {

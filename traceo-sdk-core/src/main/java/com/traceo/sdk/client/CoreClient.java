@@ -2,7 +2,7 @@ package com.traceo.sdk.client;
 
 import com.traceo.sdk.ClientOptions;
 import com.traceo.sdk.IHandler;
-import com.traceo.sdk.http.HttpAsyncClient;
+import com.traceo.sdk.http.HttpAsyncAsyncClient;
 import com.traceo.sdk.handlers.IncidentHandler;
 import com.traceo.sdk.handlers.UncaughtExceptionHandler;
 import com.traceo.sdk.logging.internal.SDKLogger;
@@ -21,7 +21,7 @@ public class CoreClient<T extends ClientOptions> implements Closeable {
     private static volatile ClientOptions configuration;
 
     /** Async http client implementation to use inside client. **/
-    public static HttpAsyncClient httpClient;
+    public static HttpAsyncAsyncClient httpClient;
 
 
     /** Handler for captured incidents. **/
@@ -50,7 +50,7 @@ public class CoreClient<T extends ClientOptions> implements Closeable {
                 LOGGER.log("You run Traceo SDK with enabled debug option.");
             }
 
-            httpClient = new HttpAsyncClient();
+            httpClient = new HttpAsyncAsyncClient();
             options.setHttpClient(httpClient);
 
             incidentHandler = new IncidentHandler(options);

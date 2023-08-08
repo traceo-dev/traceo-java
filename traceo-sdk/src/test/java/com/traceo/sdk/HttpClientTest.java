@@ -1,7 +1,7 @@
 package com.traceo.sdk;
 
 import com.traceo.sdk.logging.client.TraceoLogger;
-import com.traceo.sdk.http.HttpAsyncClient;
+import com.traceo.sdk.http.HttpAsyncAsyncClient;
 import com.traceo.sdk.http.HttpClient;
 import com.traceo.sdk.client.TraceoClient;
 import com.traceo.sdk.client.TraceoClientBuilder;
@@ -48,7 +48,7 @@ public class HttpClientTest {
 
     @Test
     public void testAsyncExecute() throws ExecutionException, InterruptedException {
-        HttpAsyncClient httpClient = new HttpAsyncClient();
+        HttpAsyncAsyncClient httpClient = new HttpAsyncAsyncClient();
         TestIRequest request = new TestIRequest();
         Future<HttpResponse> httpResponseFuture = httpClient.execute(request);
         HttpResponse response = httpResponseFuture.get();
