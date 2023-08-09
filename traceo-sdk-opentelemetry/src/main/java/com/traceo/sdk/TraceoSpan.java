@@ -2,6 +2,7 @@ package com.traceo.sdk;
 
 import io.opentelemetry.sdk.trace.data.SpanData;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,9 +26,9 @@ public class TraceoSpan {
 
     private String serviceName;
 
-    private long startEpochNanos;
+    private BigDecimal startEpochNanos;
 
-    private long endEpochNanos;
+    private BigDecimal endEpochNanos;
 
     private Map<String, String> attributes = new HashMap<>();
 
@@ -38,13 +39,24 @@ public class TraceoSpan {
     public TraceoSpan(SpanData otelSpan) {
         this.spanId = otelSpan.getSpanId();
         this.traceId = otelSpan.getTraceId();
-        this.parentSpanId = otelSpan.getParentSpanId();
+
+        if (!otelSpan.getParentSpanId().equals("0000000000000000")) {
+            this.parentSpanId = otelSpan.getParentSpanId();
+        }
+
         this.name = otelSpan.getName();
         this.kind = otelSpan.getKind().name();
-        this.startEpochNanos = otelSpan.getStartEpochNanos();
-        this.endEpochNanos = otelSpan.getEndEpochNanos();
+        this.startEpochNanos = parseLongToBigDecimal(otelSpan.getStartEpochNanos());
+        this.endEpochNanos = parseLongToBigDecimal(otelSpan.getEndEpochNanos());
         this.status = otelSpan.getStatus().getStatusCode().name();
         this.statusMessage = otelSpan.getStatus().getDescription();
+    }
+
+    private BigDecimal parseLongToBigDecimal(long epochNanos) {
+        BigDecimal originalValue = new BigDecimal(epochNanos);
+        BigDecimal divisor = new BigDecimal("1e9");
+
+        return originalValue.divide(divisor);
     }
 
     public String getName() {
@@ -111,19 +123,19 @@ public class TraceoSpan {
         this.serviceName = serviceName;
     }
 
-    public long getStartEpochNanos() {
+    public BigDecimal getStartEpochNanos() {
         return startEpochNanos;
     }
 
-    public void setStartEpochNanos(long startEpochNanos) {
+    public void setStartEpochNanos(BigDecimal startEpochNanos) {
         this.startEpochNanos = startEpochNanos;
     }
 
-    public long getEndEpochNanos() {
+    public BigDecimal getEndEpochNanos() {
         return endEpochNanos;
     }
 
-    public void setEndEpochNanos(long endEpochNanos) {
+    public void setEndEpochNanos(BigDecimal endEpochNanos) {
         this.endEpochNanos = endEpochNanos;
     }
 

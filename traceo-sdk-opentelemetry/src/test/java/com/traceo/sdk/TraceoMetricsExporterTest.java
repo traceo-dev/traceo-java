@@ -36,7 +36,7 @@ public class TraceoMetricsExporterTest extends TestCase {
     @Before
     public  void setUp() {
         ClientOptions clientOptions = NoOpClientBuilder.standard()
-                .withApiKey("xxx")
+                .withApiKey("tr_5d1c3709-119f-4fb9-b930-3e5b3a88cac7")
                 .withHost("https://webhook.site/488164a0-5467-4621-9212-2974cc3eebc7")
                 .build();
 
@@ -78,10 +78,10 @@ public class TraceoMetricsExporterTest extends TestCase {
         measurement.record(123);
         counter.add(1);
         counter.add(1);
-        counter.add(1);
+        counter.add(13);
 
         try {
-            Thread.sleep(2000); // Adjust the duration based on your exporter's flushing interval
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -92,12 +92,10 @@ public class TraceoMetricsExporterTest extends TestCase {
         Span parentSpan = tracer.spanBuilder("parent-span").startSpan();
 
         try {
-            // Simulate some work in the parent span
             parentSpan
                     .addEvent("Parent span event 1")
                     .setAttribute("atrybut eventu", "hahahah");
 
-            // Start a child span within the parent span
             Span childSpan1 = tracer
                     .spanBuilder("child-span-1")
                     .addLink(parentSpan.getSpanContext())
@@ -105,33 +103,26 @@ public class TraceoMetricsExporterTest extends TestCase {
                     .startSpan();
 
             try {
-                // Simulate some work in the child span
                 childSpan1.addEvent("Child span 1 event 1", Attributes.of(AttributeKey.stringKey("AttributeKey"), "stringKey"));
             } finally {
-                // End the child span
                 childSpan1.end();
             }
 
-            // Start another child span within the parent span
             Span childSpan2 = tracer
                     .spanBuilder("child-span-2")
                     .addLink(parentSpan.getSpanContext())
                     .startSpan();
 
             try {
-                // Simulate some work in the child span
                 childSpan2.addEvent("Child span 2 event 1");
             } finally {
-                // End the child span
                 childSpan2.end();
             }
         } finally {
-            // End the parent span
             parentSpan.end();
-
-            Thread.sleep(5000); // Adjust the duration based on your exporter's flushing interval
-
         }
+
+        Thread.sleep(5000);
     }
 
     @After

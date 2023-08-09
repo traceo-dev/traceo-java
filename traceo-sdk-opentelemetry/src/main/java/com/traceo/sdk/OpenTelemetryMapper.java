@@ -5,6 +5,7 @@ import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.sdk.metrics.data.*;
 import io.opentelemetry.sdk.trace.data.SpanData;
 
+import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -30,15 +31,8 @@ public class OpenTelemetryMapper {
 
         for (MetricData metricData : metrics) {
             List<TraceoMetric> points = getPoints(metricData);
-
-            List<TraceoMetric> traceoMetrics = points.stream().map(traceoMetric -> new TraceoMetric(
-                    metricData.getName(),
-                    traceoMetric.getType(),
-                    traceoMetric.getUnixTimestamp(),
-                    traceoMetric.getValue()
-            )).collect(Collectors.toList());
-
-            result.addAll(traceoMetrics);
+            points.forEach((e) -> e.setName(metricData.getName()));
+            result.addAll(points);
         }
 
         return result;
