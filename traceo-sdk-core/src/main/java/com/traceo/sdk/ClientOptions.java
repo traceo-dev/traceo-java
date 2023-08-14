@@ -47,6 +47,11 @@ public class ClientOptions {
      */
     private IHttpAsyncClient httpClient;
 
+    /**
+     * List of packages where SDK is used.
+     */
+    private List<String> packages = new ArrayList<>();
+
     public ClientOptions() {}
 
     public ClientOptions(ClientOptions configuration) {
@@ -57,6 +62,15 @@ public class ClientOptions {
         this.isCatchUncaughtException = configuration.isCatchUncaughtException();
         this.handlers = configuration.getHandlers();
         this.httpClient = configuration.getHttpClient();
+        this.packages = configuration.getPackages();
+    }
+
+    public List<String> getPackages() {
+        return packages;
+    }
+
+    public void setPackages(List<String> packages) {
+        this.packages = packages;
     }
 
     public void setHandlers(List<IHandler> handlers) {

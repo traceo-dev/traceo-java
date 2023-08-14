@@ -12,6 +12,7 @@ import static com.traceo.sdk.client.CoreClient.getConfigs;
 
 public class IncidentHandler {
     private final static SDKLogger LOGGER = new SDKLogger(IncidentHandler.class);
+    private final static String TRACEO_PACKAGE = "com.traceo.sdk";
 
     private final ClientOptions options;
 
@@ -34,7 +35,7 @@ public class IncidentHandler {
             return;
         }
 
-        TraceoIncident payload = processIncident(throwable, message);
+        TraceoIncident payload = processIncident(throwable, message, options);
         if (callback != null) {
             callback.run(payload);
         }
@@ -47,7 +48,7 @@ public class IncidentHandler {
         }
     }
 
-    private static TraceoIncident processIncident(Throwable throwable, String customMessage) {
+    private static TraceoIncident processIncident(Throwable throwable, String customMessage, ClientOptions options) {
         TraceoIncident traceoIncident = new TraceoIncident();
 
         String stacktrace = ThrowableUtils.stacktraceToString(throwable);
@@ -61,7 +62,7 @@ public class IncidentHandler {
             traceoIncident.setMessage(throwable.getMessage());
         }
 
-        List<TraceoTrace> traces = getTraceList(throwable);
+        List<TraceoTrace> traces = getTraceList(throwable, options);
         traceoIncident.setTraces(traces);
 
         traceoIncident.setStack(stacktrace);
@@ -70,21 +71,36 @@ public class IncidentHandler {
         return traceoIncident;
     }
 
-    private static List<TraceoTrace> getTraceList(Throwable throwable) {
+    private static List<TraceoTrace> getTraceList(Throwable throwable, ClientOptions options) {
         List<TraceoTrace> traces = new ArrayList<>();
 
-        for (StackTraceElement stackTraceElement : throwable.getStackTrace()) {
-            TraceoTrace trace = new TraceoTrace();
-            trace.setFunction(stackTraceElement.getMethodName());
+        for (StackTraceElement element : throwable.getStackTrace()) {
+            if (element == null) {
+                continue;
+            }
 
-            String[] splitFilename = stackTraceElement.getFileName().split("\\.");
+            TraceoTrace trace = new TraceoTrace();
+
+            String className = element.getClassName();
+            if (className.startsWith(TRACEO_PACKAGE)) {
+                continue;
+            }
+
+            String[] splitFilename = element.getFileName().split("\\.");
             if (splitFilename.length > 1) {
                 trace.setExtension(splitFilename[1]);
             }
 
-            trace.setFilename(stackTraceElement.getFileName());
-            trace.setLineNo(stackTraceElement.getLineNumber());
-            trace.setAbsPath(stackTraceElement.getClassName());
+            if (!element.isNativeMethod()) {
+                trace.setLineNo(element.getLineNumber());
+            }
+
+            trace.setFilename(element.getFileName());
+            trace.setFunction(element.getMethodName());
+            trace.setAbsPath(element.getClassName());
+
+            boolean isInternalTrace = options.getPackages().stream().anyMatch(className::startsWith);
+            trace.setInternal(isInternalTrace);
 
             traces.add(trace);
         }

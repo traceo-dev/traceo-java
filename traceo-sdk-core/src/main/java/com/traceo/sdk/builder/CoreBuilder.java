@@ -2,6 +2,8 @@ package com.traceo.sdk.builder;
 
 import com.traceo.sdk.ClientOptions;
 
+import java.util.List;
+
 /**
  * Base class for every client builders.
  *
@@ -75,6 +77,18 @@ public abstract class CoreBuilder<Subclass extends CoreBuilder, ConfigurationTyp
      */
     public final Subclass withCatchUncaughtException(boolean enabled) {
         configuration.setCatchUncaughtException(enabled);
+        return getSubclass();
+    }
+
+    /**
+     * List of packages where SDK is used. Based on this values, SDK
+     * can check wheter incoming exception is inside client code or in external library.
+     *
+     * @param packages List of packages where SDK is used.
+     * @return
+     */
+    public final Subclass withPackages(List<String> packages) {
+        configuration.setPackages(packages);
         return getSubclass();
     }
 }
