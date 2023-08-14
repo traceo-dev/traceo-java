@@ -41,7 +41,7 @@ public class TraceoLogger implements Ilogger {
         return new TraceoLogger(name);
     }
 
-    public void sendLogs() {
+    private void sendLogs() {
         this.logsHandler.send();
     }
 
@@ -65,7 +65,7 @@ public class TraceoLogger implements Ilogger {
         logsHandler.process(TraceoLogLevel.WARN, message, args);
     }
 
-    public void shutdown() {
+    private void shutdown() {
         logsHandler.send();
         scheduler.shutdown();
     }
