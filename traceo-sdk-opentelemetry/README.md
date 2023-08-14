@@ -25,7 +25,7 @@ dependencies {
 }
 ```
 
-**TIP:** Remember to init [`TraceoClient`]() before using this package.
+**TIP:** Remember to init [`TraceoClient`](https://github.com/traceo-dev/traceo-java/blob/master/traceo-sdk/README.md) before using this package.
 
 ### Metrics
 To use the exporter for metrics you need to use `TraceoMetricsExporter` like below:
@@ -66,7 +66,7 @@ import io.opentelemetry.sdk.OpenTelemetrySdk;
 SdkTracerProvider tracerProvider = SdkTracerProvider.builder()
        .addSpanProcessor(
                BatchSpanProcessor
-                    .builder(new TraceoSpansExporter())
+                    .builder(new TraceoSpansExporter()) // use traceo exporter here
                     .build()
                )
        .build();
