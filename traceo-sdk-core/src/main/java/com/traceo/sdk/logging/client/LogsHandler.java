@@ -1,10 +1,10 @@
-package com.traceo.sdk.logging.client;
+package org.traceo.sdk.logging.client;
 
-import com.traceo.sdk.ClientOptions;
-import com.traceo.sdk.DefaultRequest;
-import com.traceo.sdk.TraceoLog;
-import com.traceo.sdk.logging.client.slf4j.Log4jLoggerFactory;
-import com.traceo.sdk.logging.internal.SDKLogger;
+import org.traceo.sdk.ClientOptions;
+import org.traceo.sdk.DefaultRequest;
+import org.traceo.sdk.TraceoLog;
+import org.traceo.sdk.logging.client.slf4j.Log4jLoggerFactory;
+import org.traceo.sdk.logging.internal.SDKLogger;
 import org.apache.http.HttpResponse;
 import org.slf4j.Logger;
 

@@ -1,4 +1,4 @@
-package com.traceo.sdk.http;
+package org.traceo.sdk.http;
 
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.config.ConnectionConfig;

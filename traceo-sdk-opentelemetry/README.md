@@ -11,7 +11,7 @@ By using custom metrics and spans exporters (logs in near future). After receivi
 To install this SDK add this package to your `pom.xml` like below:
 ```java
 <dependency>
-    <groupId>com.traceo.sdk</groupId>
+    <groupId>org.traceo</groupId>
     <artifactId>traceo-sdk-opentelemetry</artifactId>
     <version>1.0.0</version>
 </dependency>
@@ -21,7 +21,7 @@ or to `build.gradle`
 
 ```java
 dependencies {
-    implementation 'com.traceo.sdk:traceo-sdk-opentelemetry:1.0.0'
+    implementation 'org.traceo.sdk:traceo-sdk-opentelemetry:1.0.0'
 }
 ```
 
@@ -30,7 +30,7 @@ dependencies {
 ### Metrics
 To use the exporter for metrics you need to use `TraceoMetricsExporter` like below:
 ```java
-import com.traceo.sdk.TraceoMetricsExporter;
+import org.traceo.sdk.TraceoMetricsExporter;
 import io.opentelemetry.api.metrics.MeterProvider;
 import io.opentelemetry.sdk.metrics.export.MetricReader;
 import io.opentelemetry.sdk.metrics.export.PeriodicMetricReader;
@@ -57,7 +57,7 @@ After using `TraceoMetricsExporter` Traceo Platform will receive every metrics p
 ### Spans
 To use the exporter for spans you need to use `TraceoSpansExporter` like below:
 ```java
-import com.traceo.sdk.TraceoSpansExporter;
+import org.traceo.sdk.TraceoSpansExporter;
 import io.opentelemetry.sdk.trace.SdkTracerProvider;
 import io.opentelemetry.sdk.trace.export.BatchSpanProcessor;
 import io.opentelemetry.api.trace.Tracer;

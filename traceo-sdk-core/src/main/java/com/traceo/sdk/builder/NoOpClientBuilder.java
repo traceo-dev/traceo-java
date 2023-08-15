@@ -1,6 +1,6 @@
-package com.traceo.sdk.builder;
+package org.traceo.sdk.builder;
 
-import com.traceo.sdk.ClientOptions;
+import org.traceo.sdk.ClientOptions;
 
 /**
  * Builder for tests use case

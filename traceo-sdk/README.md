@@ -7,7 +7,7 @@ To install this SDK add this package to your `pom.xml` like below:
 
 ```java
 <dependency>
-    <groupId>com.traceo.sdk</groupId>
+    <groupId>org.traceo</groupId>
     <artifactId>traceo-sdk</artifactId>
     <version>1.0.0</version>
 </dependency>
@@ -17,7 +17,7 @@ or to `build.gradle`
 
 ```java
 dependencies {
-    implementation 'com.traceo.sdk:traceo-sdk:1.0.0'
+    implementation 'org.traceo.sdk:traceo-sdk:1.0.0'
 }
 ```
 

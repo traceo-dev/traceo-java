@@ -1,10 +1,10 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
-import com.traceo.sdk.client.TraceoClient;
-import com.traceo.sdk.client.TraceoClientBuilder;
-import com.traceo.sdk.client.TraceoClientConfiguration;
-import com.traceo.sdk.logging.client.TraceoLogger;
-import com.traceo.sdk.utils.TimestampUtils;
+import org.traceo.sdk.client.TraceoClient;
+import org.traceo.sdk.client.TraceoClientBuilder;
+import org.traceo.sdk.client.TraceoClientConfiguration;
+import org.traceo.sdk.logging.client.TraceoLogger;
+import org.traceo.sdk.utils.TimestampUtils;
 import org.junit.Before;
 import org.junit.Test;
 

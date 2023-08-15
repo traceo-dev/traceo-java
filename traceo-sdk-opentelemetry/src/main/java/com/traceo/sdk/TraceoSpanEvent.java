@@ -1,4 +1,4 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
 import io.opentelemetry.sdk.trace.data.EventData;
 

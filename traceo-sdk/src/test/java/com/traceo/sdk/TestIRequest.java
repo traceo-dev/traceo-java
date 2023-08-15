@@ -1,8 +1,8 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
 
-import com.traceo.sdk.http.HttpMethod;
-import com.traceo.sdk.http.IRequest;
+import org.traceo.sdk.http.HttpMethod;
+import org.traceo.sdk.http.IRequest;
 
 
 import java.net.URISyntaxException;

@@ -1,9 +1,9 @@
-package com.traceo.sdk.client;
+package org.traceo.sdk.client;
 
-import com.traceo.sdk.ClientOptions;
-import com.traceo.sdk.EventCallback;
-import com.traceo.sdk.TraceoIncident;
-import com.traceo.sdk.logging.client.TraceoLogger;
+import org.traceo.sdk.ClientOptions;
+import org.traceo.sdk.EventCallback;
+import org.traceo.sdk.TraceoIncident;
+import org.traceo.sdk.logging.client.TraceoLogger;
 
 /**
  * Entry point for accessing Traceo SDK.

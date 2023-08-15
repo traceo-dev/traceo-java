@@ -1,7 +1,7 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
-import com.traceo.sdk.builder.NoOpClientBuilder;
-import com.traceo.sdk.client.CoreClient;
+import org.traceo.sdk.builder.NoOpClientBuilder;
+import org.traceo.sdk.client.CoreClient;
 import io.opentelemetry.api.common.AttributeKey;
 import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.api.metrics.LongCounter;

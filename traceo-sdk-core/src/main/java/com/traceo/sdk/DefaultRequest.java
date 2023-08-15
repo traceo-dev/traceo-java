@@ -1,13 +1,13 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
-import com.traceo.sdk.http.HttpMethod;
-import com.traceo.sdk.http.IRequest;
+import org.traceo.sdk.http.HttpMethod;
+import org.traceo.sdk.http.IRequest;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Default implementation of the {@link com.traceo.sdk.http.IRequest} interface.
+ * Default implementation of the {@link org.traceo.sdk.http.IRequest} interface.
  * This class should be used only for internal SDK operations.
  * @param <T> Content type class defined what should be sent in request.
  */
@@ -24,7 +24,7 @@ public class DefaultRequest<T> implements IRequest<T> {
     private Map<String, String> headers = new HashMap<>();
 
     /**
-     * {@link com.traceo.sdk.http.HttpMethod} for request.
+     * {@link org.traceo.sdk.http.HttpMethod} for request.
      */
     private HttpMethod httpMethod = HttpMethod.POST;
 

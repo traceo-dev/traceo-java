@@ -1,9 +1,9 @@
-package com.traceo.sdk.http;
+package org.traceo.sdk.http;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.traceo.sdk.client.CoreClient;
-import com.traceo.sdk.converters.StringConverter;
+import org.traceo.sdk.client.CoreClient;
+import org.traceo.sdk.converters.StringConverter;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;

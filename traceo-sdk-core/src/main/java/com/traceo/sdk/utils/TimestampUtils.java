@@ -1,4 +1,4 @@
-package com.traceo.sdk.utils;
+package org.traceo.sdk.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

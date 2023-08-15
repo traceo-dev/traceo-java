@@ -1,7 +1,7 @@
-package com.traceo.sdk.logging.internal;
+package org.traceo.sdk.logging.internal;
 
-import com.traceo.sdk.client.CoreClient;
-import com.traceo.sdk.utils.ThrowableUtils;
+import org.traceo.sdk.client.CoreClient;
+import org.traceo.sdk.utils.ThrowableUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

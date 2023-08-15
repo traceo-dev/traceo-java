@@ -1,4 +1,4 @@
-package com.traceo.sdk.http;
+package org.traceo.sdk.http;
 
 import java.util.HashMap;
 import java.util.Map;

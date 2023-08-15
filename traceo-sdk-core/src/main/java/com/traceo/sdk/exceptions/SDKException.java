@@ -1,4 +1,4 @@
-package com.traceo.sdk.exceptions;
+package org.traceo.sdk.exceptions;
 
 public class SDKException extends Exception {
     public SDKException(String message) {

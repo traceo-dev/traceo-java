@@ -1,4 +1,4 @@
-package com.traceo.sdk.converters;
+package org.traceo.sdk.converters;
 
 public class StringConverter {
     /**

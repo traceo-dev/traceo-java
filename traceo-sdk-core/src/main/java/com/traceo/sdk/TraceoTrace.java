@@ -1,4 +1,4 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
 /**
  * An item creating after parsing each trace from the stacktrace.

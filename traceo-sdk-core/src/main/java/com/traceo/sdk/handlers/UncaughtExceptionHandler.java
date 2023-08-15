@@ -1,8 +1,8 @@
-package com.traceo.sdk.handlers;
+package org.traceo.sdk.handlers;
 
-import com.traceo.sdk.ClientOptions;
-import com.traceo.sdk.IHandler;
-import com.traceo.sdk.logging.internal.SDKLogger;
+import org.traceo.sdk.ClientOptions;
+import org.traceo.sdk.IHandler;
+import org.traceo.sdk.logging.internal.SDKLogger;
 
 /**
  * Handler for uncaught exceptions.

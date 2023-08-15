@@ -1,4 +1,4 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
 /**
  * Runtime platform information on which SDk is running.

@@ -1,6 +1,6 @@
-package com.traceo.sdk.http;
+package org.traceo.sdk.http;
 
-import com.traceo.sdk.logging.internal.SDKLogger;
+import org.traceo.sdk.logging.internal.SDKLogger;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.concurrent.FutureCallback;

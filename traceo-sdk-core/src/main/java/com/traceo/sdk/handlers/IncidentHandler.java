@@ -1,18 +1,18 @@
-package com.traceo.sdk.handlers;
+package org.traceo.sdk.handlers;
 
-import com.traceo.sdk.*;
-import com.traceo.sdk.logging.internal.SDKLogger;
-import com.traceo.sdk.utils.ThrowableUtils;
+import org.traceo.sdk.*;
+import org.traceo.sdk.logging.internal.SDKLogger;
+import org.traceo.sdk.utils.ThrowableUtils;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.traceo.sdk.client.CoreClient.getConfigs;
+import static org.traceo.sdk.client.CoreClient.getConfigs;
 
 public class IncidentHandler {
     private final static SDKLogger LOGGER = new SDKLogger(IncidentHandler.class);
-    private final static String TRACEO_PACKAGE = "com.traceo.sdk";
+    private final static String TRACEO_PACKAGE = "org.traceo.sdk";
 
     private final ClientOptions options;
 

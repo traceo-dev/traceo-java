@@ -1,12 +1,12 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
-import com.traceo.sdk.logging.client.TraceoLogger;
-import com.traceo.sdk.http.HttpAsyncAsyncClient;
-import com.traceo.sdk.http.HttpClient;
-import com.traceo.sdk.client.TraceoClient;
-import com.traceo.sdk.client.TraceoClientBuilder;
-import com.traceo.sdk.client.TraceoClientConfiguration;
-import com.traceo.sdk.logging.internal.SDKLogger;
+import org.traceo.sdk.logging.client.TraceoLogger;
+import org.traceo.sdk.http.HttpAsyncAsyncClient;
+import org.traceo.sdk.http.HttpClient;
+import org.traceo.sdk.client.TraceoClient;
+import org.traceo.sdk.client.TraceoClientBuilder;
+import org.traceo.sdk.client.TraceoClientConfiguration;
+import org.traceo.sdk.logging.internal.SDKLogger;
 import org.apache.http.HttpResponse;
 import org.junit.Before;
 import org.junit.Test;

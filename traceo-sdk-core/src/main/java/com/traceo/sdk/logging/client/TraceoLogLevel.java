@@ -1,4 +1,4 @@
-package com.traceo.sdk.logging.client;
+package org.traceo.sdk.logging.client;
 
 public enum TraceoLogLevel {
     LOG,

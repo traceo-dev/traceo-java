@@ -1,9 +1,9 @@
-package com.traceo.sdk.http;
+package org.traceo.sdk.http;
 
 import org.apache.http.client.methods.HttpRequestBase;
 
 /**
- * An interface to create request used by {@link HttpAsyncAsyncClient} or {@link com.traceo.sdk.http.HttpClient}
+ * An interface to create request used by {@link HttpAsyncAsyncClient} or {@link org.traceo.sdk.http.HttpClient}
  */
 public interface IHttpRequestFactory {
 

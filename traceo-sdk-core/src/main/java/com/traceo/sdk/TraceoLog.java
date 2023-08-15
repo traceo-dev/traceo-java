@@ -1,7 +1,7 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
-import com.traceo.sdk.logging.client.TraceoLogLevel;
-import com.traceo.sdk.utils.TimestampUtils;
+import org.traceo.sdk.logging.client.TraceoLogLevel;
+import org.traceo.sdk.utils.TimestampUtils;
 
 import java.util.HashMap;
 import java.util.Map;

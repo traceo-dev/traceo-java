@@ -1,11 +1,11 @@
-package com.traceo.sdk.client;
+package org.traceo.sdk.client;
 
-import com.traceo.sdk.ClientOptions;
-import com.traceo.sdk.IHandler;
-import com.traceo.sdk.http.HttpAsyncAsyncClient;
-import com.traceo.sdk.handlers.IncidentHandler;
-import com.traceo.sdk.handlers.UncaughtExceptionHandler;
-import com.traceo.sdk.logging.internal.SDKLogger;
+import org.traceo.sdk.ClientOptions;
+import org.traceo.sdk.IHandler;
+import org.traceo.sdk.http.HttpAsyncAsyncClient;
+import org.traceo.sdk.handlers.IncidentHandler;
+import org.traceo.sdk.handlers.UncaughtExceptionHandler;
+import org.traceo.sdk.logging.internal.SDKLogger;
 
 import java.io.Closeable;
 import java.io.IOException;

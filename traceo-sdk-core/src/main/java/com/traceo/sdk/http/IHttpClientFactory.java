@@ -1,4 +1,4 @@
-package com.traceo.sdk.http;
+package org.traceo.sdk.http;
 
 /**
  * An interface to create asynchronous http client instance.

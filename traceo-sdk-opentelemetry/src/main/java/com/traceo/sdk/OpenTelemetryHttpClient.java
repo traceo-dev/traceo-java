@@ -1,7 +1,7 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
-import com.traceo.sdk.client.CoreClient;
-import com.traceo.sdk.logging.internal.SDKLogger;
+import org.traceo.sdk.client.CoreClient;
+import org.traceo.sdk.logging.internal.SDKLogger;
 import io.opentelemetry.sdk.common.CompletableResultCode;
 import org.apache.http.HttpResponse;
 

@@ -1,7 +1,7 @@
-package com.traceo.sdk.logging.client;
+package org.traceo.sdk.logging.client;
 
-import com.traceo.sdk.ClientOptions;
-import com.traceo.sdk.Ilogger;
+import org.traceo.sdk.ClientOptions;
+import org.traceo.sdk.Ilogger;
 
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class TraceoLogger implements Ilogger {
 
-    private static final String BASE_LOGGER_NAME = "com.traceo.sdk.logging.client.TraceoLogger";
+    private static final String BASE_LOGGER_NAME = "org.traceo.sdk.logging.client.TraceoLogger";
 
     private static ClientOptions clientOptions = new ClientOptions();
 

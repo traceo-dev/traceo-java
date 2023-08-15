@@ -1,6 +1,6 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
-import com.traceo.sdk.http.IHttpAsyncClient;
+import org.traceo.sdk.http.IHttpAsyncClient;
 
 import java.util.ArrayList;
 import java.util.List;

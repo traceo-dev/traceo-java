@@ -1,4 +1,4 @@
-package com.traceo.sdk.http;
+package org.traceo.sdk.http;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ResponseHandler;

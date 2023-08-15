@@ -1,6 +1,6 @@
-package com.traceo.sdk;
+package org.traceo.sdk;
 
-import com.traceo.sdk.client.CoreClient;
+import org.traceo.sdk.client.CoreClient;
 import io.opentelemetry.sdk.common.CompletableResultCode;
 import io.opentelemetry.sdk.metrics.InstrumentType;
 import io.opentelemetry.sdk.metrics.data.*;

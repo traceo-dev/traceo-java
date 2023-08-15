@@ -1,6 +1,6 @@
-package com.traceo.sdk.client;
+package org.traceo.sdk.client;
 
-import com.traceo.sdk.ClientOptions;
+import org.traceo.sdk.ClientOptions;
 
 public class TraceoClientConfiguration extends ClientOptions {
 
