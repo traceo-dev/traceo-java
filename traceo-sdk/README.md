@@ -49,7 +49,7 @@ Table of available options in `TraceoClientBuilder`:
 
 Incidents are all the exceptions and other problems that occur in your application. After each exception occurs, the Traceo SDK catches the exception and sends it to the Traceo Platform. To catch an exception and send it to the Traceo platform, use the static `catchException()` method from the `TraceoClient` class. 
 
-```
+```java
 try {
     // your code
 } catch (ArrayIndexOutOfBoundsException exception) {
@@ -86,7 +86,7 @@ Available logger methods:
 
 **TIP:** Remember to init `TraceoClient` before using `TraceoLogger`.
 ### More
-This package is also required to integration with `OpenTelemetry for Java`. Full implementation guide can be found [here]().
+This package is also required to integration with `OpenTelemetry for Java`. Full implementation guide can be found [here](https://github.com/traceo-dev/traceo-java/blob/master/traceo-sdk-opentelemetry/README.md).
 
 ## Support
 Feel free to create Issues, Pull Request and Discussion. If you want to contact with the developer working on this package click [here](mailto:piotr.szewczyk.software@gmail.com).
