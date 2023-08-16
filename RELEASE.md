@@ -1,6 +1,9 @@
 # Release to OSSRH
 Important mvn commands to release new SDK version to OSSRH.
 
+Profiles:
+- enable `release` profile to use plugins for sonatype, javadoc and gpg
+
 Run from root to update version in each pom.xml:
 - `mvn versions:set -DnewVersion=XXX`
 
@@ -12,6 +15,7 @@ Performing a Snapshot Deployment:
 
 Manually Releasing the Deployment to the Central Repository:
 - `mvn nexus-staging:release`
+
 
 
 Source: https://central.sonatype.org/publish/publish-maven/
