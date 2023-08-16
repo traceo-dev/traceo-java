@@ -29,26 +29,21 @@ dependencies {
 
 ### Metrics
 To use the exporter for metrics you need to use `TraceoMetricsExporter` like below:
-```java
-import org.traceo.sdk.TraceoMetricsExporter;
-import io.opentelemetry.api.metrics.MeterProvider;
-import io.opentelemetry.sdk.metrics.export.MetricReader;
-import io.opentelemetry.sdk.metrics.export.PeriodicMetricReader;
-import io.opentelemetry.sdk.metrics.export.PeriodicMetricReaderBuilder;
-import io.opentelemetry.sdk.metrics.SdkMeterProvider;
-import io.opentelemetry.sdk.resources.Resource;
 
-PeriodicMetricReaderBuilder readerBuilder = PeriodicMetricReader
+```java
+
+
+PeriodicMetricReaderBuilder readerBuilder=PeriodicMetricReader
         .builder(new TraceoMetricsExporter()) //use traceo exporter here
         .setInterval(Duration.ofMillis(500)); //optional
 
-MetricReader reader = readerBuilder.build();
+        MetricReader reader=readerBuilder.build();
 
-MeterProvider meterProvider = SdkMeterProvider.builder()
-         .setResource(Resource.getDefault())
-         .registerMetricReader(reader)
-         .build();
-         
+        MeterProvider meterProvider=SdkMeterProvider.builder()
+        .setResource(Resource.getDefault())
+        .registerMetricReader(reader)
+        .build();
+
 // use meterProvider to collect metrics
 ```
 
@@ -56,26 +51,23 @@ After using `TraceoMetricsExporter` Traceo Platform will receive every metrics p
 
 ### Spans
 To use the exporter for spans you need to use `TraceoSpansExporter` like below:
+
 ```java
-import org.traceo.sdk.TraceoSpansExporter;
-import io.opentelemetry.sdk.trace.SdkTracerProvider;
-import io.opentelemetry.sdk.trace.export.BatchSpanProcessor;
-import io.opentelemetry.api.trace.Tracer;
-import io.opentelemetry.sdk.OpenTelemetrySdk;
 
-SdkTracerProvider tracerProvider = SdkTracerProvider.builder()
-       .addSpanProcessor(
-               BatchSpanProcessor
-                    .builder(new TraceoSpansExporter()) // use traceo exporter here
-                    .build()
-               )
-       .build();
-        
-OpenTelemetrySdk openTelemetry = OpenTelemetrySdk.builder()
-       .setTracerProvider(tracerProvider)
-       .build();
 
-Tracer tracer = openTelemetry.getTracerProvider().get("your-instrumentation-name");
+SdkTracerProvider tracerProvider=SdkTracerProvider.builder()
+        .addSpanProcessor(
+        BatchSpanProcessor
+        .builder(new TraceoSpansExporter()) // use traceo exporter here
+        .build()
+        )
+        .build();
+
+        OpenTelemetrySdk openTelemetry=OpenTelemetrySdk.builder()
+        .setTracerProvider(tracerProvider)
+        .build();
+
+        Tracer tracer=openTelemetry.getTracerProvider().get("your-instrumentation-name");
 
 // use tracer to instrument spans
 ```

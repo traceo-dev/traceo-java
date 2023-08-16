@@ -9,7 +9,12 @@
         <version>1.0.0</version>
     </parent>
 
+    <name>Traceo SDK</name>
+    <description>Module to integration with Traceo Platform.</description>
+
+    <groupId>org.traceo</groupId>
     <artifactId>traceo-sdk</artifactId>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -21,18 +26,12 @@
         <dependency>
             <groupId>org.traceo</groupId>
             <artifactId>traceo-sdk-core</artifactId>
-            <version>${traceo.core.version}</version>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

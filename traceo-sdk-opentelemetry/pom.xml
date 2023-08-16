@@ -9,7 +9,12 @@
         <version>1.0.0</version>
     </parent>
 
+    <name>Traceo SDK for OpenTelemetry</name>
+    <description>OpenTelemetry SDK for Traceo</description>
+
+    <groupId>org.traceo</groupId>
     <artifactId>traceo-sdk-opentelemetry</artifactId>
+    <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
@@ -21,33 +26,25 @@
         <dependency>
             <groupId>org.traceo</groupId>
             <artifactId>traceo-sdk-core</artifactId>
-            <version>${traceo.core.version}</version>
+            <version>1.0.0</version>
         </dependency>
 
-        <!-- OpenTelemetry API -->
         <dependency>
             <groupId>io.opentelemetry</groupId>
             <artifactId>opentelemetry-api</artifactId>
-            <version>${opentelemetry.version}</version>
+            <version>1.28.0</version>
         </dependency>
 
-        <!-- OpenTelemetry SDK (includes API) -->
         <dependency>
             <groupId>io.opentelemetry</groupId>
             <artifactId>opentelemetry-sdk</artifactId>
-            <version>${opentelemetry.version}</version>
+            <version>1.28.0</version>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito.core.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

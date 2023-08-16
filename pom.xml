@@ -5,9 +5,27 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.traceo</groupId>
+
     <artifactId>traceo-java-sdk</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
+
+    <name>Traceo Java SDK</name>
+    <description>Set of SDKs to integration with Trace Platform.</description>
+
+    <url>https://www.traceo.cloud/</url>
+
+    <developers>
+        <developer>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+        </license>
+    </licenses>
+
     <modules>
         <module>traceo-sdk-opentelemetry</module>
         <module>traceo-sdk-core</module>
@@ -19,13 +37,88 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <apache.httpclient.version>4.5.13</apache.httpclient.version>
-        <apache.httpcore.version>4.4.14</apache.httpcore.version>
-        <apache.httpasync.version>4.1.4</apache.httpasync.version>
-        <jackson.databind.version>2.13.0</jackson.databind.version>
-        <mockito.core.version>3.11.2</mockito.core.version>
-        <slf4j.api.version>1.7.36</slf4j.api.version>
-        <opentelemetry.version>1.28.0</opentelemetry.version>
+<!--        <apache.httpclient.version>4.5.13</apache.httpclient.version>-->
+<!--        <apache.httpcore.version>4.4.14</apache.httpcore.version>-->
+<!--        <apache.httpasync.version>4.1.4</apache.httpasync.version>-->
+<!--        <jackson.databind.version>2.13.0</jackson.databind.version>-->
+<!--        <mockito.core.version>3.11.2</mockito.core.version>-->
+<!--        <slf4j.api.version>1.7.36</slf4j.api.version>-->
+<!--        <opentelemetry.version>1.28.0</opentelemetry.version>-->
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <configuration>
+                    <sourcepath>src/main/java</sourcepath>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <connection>scm:git:https://github.com/traceo-dev/traceo-java</connection>
+        <developerConnection>scm:git:https://github.com/traceo-dev/traceo-java</developerConnection>
+        <url>https://github.com/traceo-dev/traceo-java</url>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>
