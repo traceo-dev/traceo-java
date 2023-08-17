@@ -1,3 +1,5 @@
+<img src="https://github.com/traceo-dev/traceo/blob/develop/public/packages/app/public/traceo-fav.PNG" width="150px">
+
 # Traceo SDKs for Java
 
 A set of SDKS for integration with the [Traceo Platform](https://github.com/traceo-dev/traceo).
